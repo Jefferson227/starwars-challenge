@@ -1,0 +1,28 @@
+<app-loading [showLoading]="showLoading"></app-loading>
+
+<div class="wrapper">
+  <div>
+    <mat-form-field style="width: 100%;">
+      <input matInput
+        [placeholder]="placeholder"
+        [formControl]="searchCtrl">
+    </mat-form-field>
+  </div>
+  
+  <div>
+    <mat-radio-group (change)="onChangeRadioGroup($event)">
+      <mat-radio-button value="planet" [checked]="true">Planet</mat-radio-button>
+      <mat-radio-button value="people">People</mat-radio-button>
+    </mat-radio-group>
+  </div>
+  
+  <div class="error-message">{{errorMessage}}</div>
+  
+  <app-planet-list *ngIf="searchType === 'planet'"
+    [planets]="planets">
+  </app-planet-list>
+  
+  <app-people-list *ngIf="searchType === 'people'"
+    [people]="people">
+  </app-people-list>
+</div>

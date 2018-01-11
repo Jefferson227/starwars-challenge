@@ -1,0 +1,7 @@
+<mat-list>
+  <mat-list-item *ngFor="let person of people"
+    (click)="goToDetails(person.name)">
+    <h4 mat-line>{{person.name}}</h4>
+    <p mat-line><small>Height: {{person.height}} cm</small></p>
+  </mat-list-item>
+</mat-list>

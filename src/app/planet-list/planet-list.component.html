@@ -1,0 +1,7 @@
+<mat-list>
+  <mat-list-item *ngFor="let planet of planets"
+    (click)="goToDetails(planet.name)">
+    <h4 mat-line>{{planet.name}}</h4>
+    <p mat-line><small>Population: {{planet.population}}</small></p>
+  </mat-list-item>
+</mat-list>

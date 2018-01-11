@@ -1,0 +1,16 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/deeppurple-amber.css";
+
+.wrapper {
+    margin-top: 5em;
+}
+
+.mat-list-item {
+    background: rgb(218, 215, 215);
+    margin-bottom: 0.5em;
+    cursor: pointer;
+}
+
+.mat-card {
+    background: rgb(218, 215, 215);
+}

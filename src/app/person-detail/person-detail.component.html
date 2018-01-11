@@ -1,0 +1,26 @@
+<app-loading [showLoading]="showLoading"></app-loading>
+
+<div class="wrapper">
+  <mat-card class="mat-card">
+    <mat-card-header>
+      <mat-card-title><h3>{{name}}</h3></mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <div>Height: {{height}} cm</div>
+      <div>Gender: {{gender}}</div>
+      <div>Birth Year: {{birthYear}}</div>
+      <div>Hair Color: {{hairColor}}</div>
+      <div>Skin Color: {{skinColor}}</div>
+      <div>Homeworld: <a [routerLink]="homeworldLink">{{homeworld}}</a></div>
+      <div>Films:
+        <ul>
+          <li *ngFor="let film of films">{{film}}</li>
+        </ul>
+      </div>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button
+        (click)="goBack()">BACK</button>
+    </mat-card-actions>
+  </mat-card>
+</div>
